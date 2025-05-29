@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Typing Trainer</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body oncontextmenu="return false;">
+		<h1 id="mainTitle">Typing Trainer</h1>
+		<input type="text" id="username" placeholder="Enter your name" />
+		<div id="modeSelector">
+			<input type="radio" name="mode" id="randomMode" value="random" checked />
+			<label for="randomMode" id="labelRandom">Random Text</label>
+			<input type="radio" name="mode" id="customMode" value="custom" />
+			<label for="customMode" id="labelCustom">My Text</label>
+		</div>
+		<textarea id="customText" placeholder="Enter your custom text here..." style="display: none"></textarea>
+		<div id="storyContainer"></div>
+		<p id="loadingHint" style="text-align: center; color: #cecdcd; display: none">Please wait...</p>
+		<textarea id="inputArea" placeholder="Start typing here..." disabled></textarea>
+		<div id="stats"></div>
+		<button id="startButton" onclick="restart()">Start</button>
+		<div style="text-align: center">
+			<button id="saveButton" onclick="saveResult()" style="display: none">Save Result</button>
+		</div>
+		<p id="saveHint" style="display: none; font-style: italic; color: #cecdcd">*To appear in the leaderboard, enter your name</p>
+		<h2 id="leaderboardTitle">Leaderboard</h2>
+		<ul id="leaderboard"></ul>
+		<script src="script.js"></script>
+	</body>
+</html>
