@@ -70,7 +70,7 @@ input.addEventListener('input', () => {
 	if (typed === storyText) {
 		const timeTaken = (Date.now() - startTime) / 1000;
 		const timeMin = timeTaken / 60;
-		const wpm = Math.round(storyText.length / 5 / timeMin);
+		const wpm = Math.round(typed.length / 5 / timeMin);
 		const points = Math.round(wpm * timeMin - errors * 3);
 		stats.innerText = `Finished! Speed: ${wpm} WPM | Time: ${timeMin.toFixed(2)} min | Errors: ${errors} | Points: ${points}`;
 		input.disabled = true;
